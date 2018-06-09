@@ -141,15 +141,47 @@ table {
 }
 body {
   border: 2px solid blue;
+  min-height: 100vh;
 }
-.container {
+.Container {
   border: 2px solid red;
-  max-width: 1040px;
 }
-@media (min-width: 1040px) {
-  .container {
-    max-width: 1040px;
+@media (min-width: 1024px) {
+  .Container {
+    max-width: 1024px;
     margin: 0 auto;
-    border: 2px solid green;
+    border: 2px solid red;
   }
+}
+.Jumbotron {
+  border: 2px solid lime;
+  background: url('../img/home/home-mobile-jumbotron.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 260px;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 401px) {
+  .Jumbotron {
+    background-image: url('../img/home/home-jumbotron.png');
+  }
+}
+@media (min-width: 1024px) {
+  .Jumbotron {
+    min-height: 598px;
+  }
+}
+.Navbar {
+  border: 2px solid blue;
+}
+.Brand {
+  border: 2px solid red;
+}
+.Nav {
+  border: 2px solid red;
+}
+h1 {
+  border: 2px solid red;
+  display: inline-block;
 }
