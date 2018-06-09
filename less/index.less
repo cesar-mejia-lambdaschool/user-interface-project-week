@@ -137,6 +137,11 @@ table {
 }
 
 /* Your Code Goes Here */
+@sm: 576px;
+@md: 768px;
+@lg: 992px;
+@xl: 1200px;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -144,51 +149,104 @@ table {
 }
 
 body {
-  border: 2px solid blue;
-  min-height: 100vh;
+  font-family: Roboto, Arial, sans-serif;
+  background: #ffffff;
+  color: #222222;
+  font-weight: normal;
+  line-height: 24px;
 }
 
 .Container {
-  border: 2px solid red;
-  @media (min-width: 1024px) {
-    max-width: 1024px;
-    margin: 0 auto;
-    border: 2px solid red;
-  }
 }
 
-.Jumbotron {
-  border: 2px solid lime;
-  background: url('../img/home/home-mobile-jumbotron.png') no-repeat center
-    center fixed;
-  background-size: cover;
+.Hero-image {
   position: relative;
-  min-height: 260px;
-  width: 100%;
-  height: auto;
-
-  @media (min-width: 401px) {
+  padding-bottom: 70%;
+  background-image: url('../img/home/home-mobile-jumbotron.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1024px;
+  max-height: 598px;
+  margin: 0 auto;
+  transition-property: background-image;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  @media (min-width: 321px) {
     background-image: url('../img/home/home-jumbotron.png');
+    padding-bottom: 58.40%;
   }
-
   @media (min-width: 1024px) {
-    min-height: 598px;
+    padding-bottom: 0;
+    height: 598px;
   }
 }
 
 .Navbar {
-  border: 2px solid blue;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  transition: padding 1.5s ease-in-out;
+
+  @media (min-width: 576px) {
+    padding: 20px 0;
+  }
 }
 
 .Brand {
-  border: 2px solid red;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  margin-left: 4%;
+  transition: margin-left 2s ease-in-out;
+  @media (min-width: 576px) {
+    margin-left: 8%;
+  }
 }
 
 .Nav {
-  border: 2px solid red;
+  margin-right: 4%;
+  transition: margin-right 2s ease-in-out;
+  @media (min-width: 576px) {
+    margin-right: 8.5%;
+  }
 }
 
-h1 {
-  border: 2px solid red;
-  display: inline-block;
+.Hero-header {
+  position: absolute;
+  bottom: 48px;
+  left: 4%;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  color: #ffffff;
+  transition-property: font-size;
+  transition-duration: 1.5s;
+  transition-timing-function: ease;
+
+  @media (min-width: 576px) {
+    font-size: 42px;
+    line-height: 46px;
+    left: 8%;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 54px;
+    line-height: 58px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 60px;
+    line-height: 64px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 64px;
+    line-height: 75px;
+  }
 }
