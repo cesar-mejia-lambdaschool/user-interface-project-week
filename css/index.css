@@ -136,9 +136,20 @@ table {
 /* Your Code Goes Here */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  border: 2px solid blue;
 }
 .container {
-  min-height: 100vh;
-  max-width: 1040px;
   border: 2px solid red;
+  max-width: 1040px;
+}
+@media (min-width: 1040px) {
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+    border: 2px solid green;
+  }
 }
